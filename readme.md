@@ -2,7 +2,7 @@
 
 **A user role management plugin for WordPress that puts you in full control of your site's permissions.**
 
-This plugin is forked from the last release of the popular [justintadlock/members](https://github.com/justintadlock/members) plugin, before it's codebase was hijacked and turned into a sales pitch for a premium plugin by it's new maintainers. 
+This plugin is forked from the last release (`2.2.0`) of the popular [justintadlock/members](https://github.com/justintadlock/members) plugin, before it's codebase was hijacked and turned into a sales pitch for a premium plugin by it's new maintainers. 
 
 > Note that the ambition for this fork is to strip out all but the role & capability management features (see 'Deprecated Features' below), and to maintain this functionality through future WP releases. If you rely on these features please use an alternative version.
 
@@ -14,13 +14,13 @@ This plugin is forked from the last release of the popular [justintadlock/member
 
 <!-- Also see the release [milestones](https://github.com/freshsystems/wp-permission-manager/milestones). -->
 
-#### v2
+#### `v2.2.1`
 
 - [x] ~~Update Composer/package details.~~
 - [x] ~~Update plugin name throughout codebase (`Members` → `WP Permission Manager`).~~
 - [ ] Remove non-functional admin pages (i.e. 'Donate').
 
-#### v3
+#### `v3.0.0`
 
 - [ ] Remove all 'Shortcodes'.
 - [ ] Remove all 'Widgets'.
@@ -28,7 +28,7 @@ This plugin is forked from the last release of the popular [justintadlock/member
 - [ ] Remove 'Private Site' functionality.
 - [ ] Remove add-on functionality and maybe incorporate relevant add-ons (license dependant) into the plugin's core.
 
-#### v4
+#### `v4.0.0`
 
 - [ ] Update remaining 'members' translation text-domain, slug use, etc.
 - [ ] Update the plugin's namespace, e.g. `Members\` → `Fresh\PermissionManager\`.
