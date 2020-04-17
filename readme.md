@@ -27,6 +27,9 @@ This plugin is forked from the last release of the popular [justintadlock/member
 - [ ] Remove all 'Content Permission' functionality.
 - [ ] Remove 'Private Site' functionality.
 - [ ] Remove add-on functionality and maybe incorporate relevant add-ons (license dependant) into the plugin's core.
+
+#### v4
+
 - [ ] Update remaining 'members' translation text-domain, slug use, etc.
 - [ ] Update the plugin's namespace, e.g. `Members\` → `Fresh\PermissionManager\`.
 - [ ] Update the prefix for all filter/action hook names and functions (deprecate the originals for permanent backwards-compatibility), e.g. `members_register_cap_group()` → `Fresh\PermissionManager\register_cap_group()`, `members_register_cap_groups` → `wppm_register_cap_groups`.
@@ -41,7 +44,7 @@ This plugin is forked from the last release of the popular [justintadlock/member
 
 ### Deprecated Features
 
-Expect the following deprecated features to be removed entirely in the near future.
+Expect the following features to be removed entirely in the near future.
 
 * ~~**Content Permissions:** Gives you control over which users (by role) have access to post content.~~
 * ~~**Shortcodes:** Shortcodes to control who has access to content.~~
