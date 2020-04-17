@@ -31,9 +31,11 @@ This plugin is forked from the last release (`2.2.0`) of the popular [justintadl
 
 #### `v4.0.0`
 
-- [ ] Update remaining 'members' translation text-domain, slug use, etc.
-- [ ] Update the plugin's namespace, e.g. `Members\` → `Fresh\PermissionManager\`.
-- [ ] Update the prefix for all filter/action hook names and functions (deprecate the originals for permanent backwards-compatibility), e.g. `members_register_cap_group()` → `Fresh\PermissionManager\register_cap_group()`, `members_register_cap_groups` → `wppm_register_cap_groups`.
+- [ ] Replace remaining "members" terminology (translation text-domain, slug use, etc.).
+- [ ] Replace the plugin's namespace, e.g. `Members\` → `Fresh\PermissionManager\`.
+- [ ] Replace the prefix for all filter/action hook names and functions (deprecate the originals for permanent backwards-compatibility), e.g. `members_register_cap_group()` → `Fresh\PermissionManager\register_cap_group()`, `members_register_cap_groups` → `wppm_register_cap_groups`.
+- [ ] Consider implementing some enhancements proposed in [justintadlock/members - 3.0.0 Milestone](https://github.com/justintadlock/members/milestone/5).
+- [ ] Update Documentation.
 - [ ] Publish to the WordPress Plugin Directory.
 
 ### Plugin Features
