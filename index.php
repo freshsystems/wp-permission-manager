@@ -1,11 +1,11 @@
 <?php
 /**
- * Plugin Name: Members
- * Plugin URI:  https://themehybrid.com/plugins/members
- * Description: A user and role management plugin that puts you in full control of your site's permissions. This plugin allows you to edit your roles and their capabilities, clone existing roles, assign multiple roles per user, block post content, or even make your site completely private.
+ * Plugin Name: WP Permission Manager
+ * Plugin URI:  https://github.com/freshsystems/wp-permission-manager/
+ * Description: A user role management plugin for WordPress that puts you in full control of your site's permissions.
  * Version:     2.2.0
- * Author:      Justin Tadlock
- * Author URI:  https://themehybrid.com
+ * Author:      Fresh Systems
+ * Author URI:  https://freshsystems.co.uk
  * Text Domain: members
  * Domain Path: /lang
  *

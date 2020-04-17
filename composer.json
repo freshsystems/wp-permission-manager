@@ -1,11 +1,16 @@
 {
-	"name"        : "justintadlock/members",
-	"description" : "A user and role management plugin that puts you in full control of your site's permissions. This plugin allows you to edit your roles and their capabilities, clone existing roles, assign multiple roles per user, block post content, or even make your site completely private.",
+	"name"        : "freshsystems/wp-permission-manager",
+	"description" : "A user role management plugin for WordPress that puts you in full control of your site's permissions.",
 	"keywords"    : ["wordpress"],
-	"homepage"    : "https://themehybrid.com/plugins/members",
+	"homepage"    : "https://github.com/freshsystems/wp-permission-manager",
 	"license"     : "GPL-2.0+",
 	"type"        : "wordpress-plugin",
 	"authors"     : [
+		{
+			"name"     : "Fresh Systems",
+			"email"    : "info@freshsystems.co.uk",
+			"homepage" : "https://freshsystems.co.uk"
+		},
 		{
 			"name"     : "Justin Tadlock",
 			"email"    : "justintadlock@gmail.com",
@@ -17,7 +22,6 @@
 		"php"                 : ">=5.3.0"
 	},
 	"support"     : {
-		"issues": "https://github.com/justintadlock/members/issues",
-		"forum" : "https://themehybrid.com/board/topics"
+		"issues": "https://github.com/freshsystems/wp-permission-manager/issues"
 	}
 }

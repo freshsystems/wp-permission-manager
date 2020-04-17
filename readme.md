@@ -1,29 +1,54 @@
-# Members
+# WP Permission Manager
 
-Members is a plugin that extends your control over your blog.  It's a user, role, and capability management plugin that was created to make WordPress a more powerful CMS.
+**A user role management plugin for WordPress that puts you in full control of your site's permissions.**
 
-It puts you in control over permissions on your site by providing a user interface (UI) for WordPress' powerful role and cap system, which is traditionally only available to developers who know how to code this by hand.
+This plugin is forked from the last release of the popular [justintadlock/members](https://github.com/justintadlock/members) plugin, before it's codebase was hijacked and turned into a sales pitch for a premium plugin by it's new maintainers. 
 
-## Plugin Features
+> Note that the ambition for this fork is to strip out all but the role & capability management features (see 'Deprecated Features' below), and to maintain this functionality through future WP releases. If you rely on these features please use an alternative version.
+
+![Screenshot](screenshot-2.png)
+
+---
+
+### Roadmap
+
+<!-- Also see the release [milestones](https://github.com/freshsystems/wp-permission-manager/milestones). -->
+
+#### v2
+
+- [x] ~~Update Composer/package details.~~
+- [x] ~~Update plugin name throughout codebase (`Members` → `WP Permission Manager`).~~
+- [ ] Remove non-functional admin pages (i.e. 'Donate').
+
+#### v3
+
+- [ ] Remove all 'Shortcodes'.
+- [ ] Remove all 'Widgets'.
+- [ ] Remove all 'Content Permission' functionality.
+- [ ] Remove 'Private Site' functionality.
+- [ ] Remove add-on functionality and maybe incorporate relevant add-ons (license dependant) into the plugin's core.
+- [ ] Update remaining 'members' translation text-domain, slug use, etc.
+- [ ] Update the plugin's namespace, e.g. `Members\` → `Fresh\PermissionManager\`.
+- [ ] Update the prefix for all filter/action hook names and functions (deprecate the originals for permanent backwards-compatibility), e.g. `members_register_cap_group()` → `Fresh\PermissionManager\register_cap_group()`, `members_register_cap_groups` → `wppm_register_cap_groups`.
+- [ ] Publish to the WordPress Plugin Directory.
+
+### Plugin Features
 
 * **Role Manager:** Allows you to edit, create, and delete roles as well as capabilities for these roles.
 * **Multiple User Roles:** Give one, two, or even more roles to any user.
 * **Explicitly Deny Capabilities:** Deny specific caps to specific user roles.
 * **Clone Roles:** Build a new role by cloning an existing role.
-* **Content Permissions:** Gives you control over which users (by role) have access to post content.
-* **Shortcodes:** Shortcodes to control who has access to content.
-* **Widgets:**  A login form widget and users widget to show in your theme's sidebars.
-* **Private Site:** You can make your site and its feed completely private if you want.
 
-## Professional Support
+### Deprecated Features
 
-If you need professional plugin support from me, the plugin author, you can access the support forums at [Theme Hybrid](https://themehybrid.com/board/topics), which is a professional WordPress help/support site where I handle support for all my plugins and themes for a community of 75,000+ users (and growing).
+Expect the following deprecated features to be removed entirely in the near future.
 
-## Copyright and License
+* ~~**Content Permissions:** Gives you control over which users (by role) have access to post content.~~
+* ~~**Shortcodes:** Shortcodes to control who has access to content.~~
+* ~~**Widgets:**  A login form widget and users widget to show in your theme's sidebars.~~
+* ~~**Private Site:** You can make your site and its feed completely private if you want.~~
 
-This project is licensed under the [GNU GPL](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html), version 2 or later.
-
-2009&thinsp;&ndash;&thinsp;2018 &copy; [Justin Tadlock](http://justintadlock.com).
+---
 
 ## Documentation
 
@@ -105,90 +130,6 @@ You can also multiple roles to a user from the add new user screen.
 
 On the "Users" screen in the admin, you can bulk add or remove single roles from multiple users.
 
-### Content permissions feature
-
-The Content Permissions feature adds an additional meta box on the post editing screen.
-
-For any public post type (posts, pages, etc.), you'll see a "Content Permissions" meta box on the post editing screen.  This meta box allows you to select which roles can view the content of the post/page.  If no roles are selected, anyone can view the content.  The post author, users that can edit the post, and any users of roles with the `restrict_content` capability can **always** view the post, regardless of their role.
-
-You can add a custom error message for individual posts.  Otherwise, the error message will default to whatever you have set under the plugin settings.
-
-**Big important note:** This feature only blocks the post content (that's what you write in the post editor), post excerpt, and post comments.  It does not block anything else.
-
-### Shortcodes
-
-There are several shortcodes that you can use in your post editor or any shortcode-ready area..
-
-#### [members_access]
-
-The `[members_access]` shortcode is for hiding content from particular roles and capabilities.  You need to wrap your content when using this shortcode:
-
-	[members_access role="editor"]Hide this content from everyone but editors.[/members_access]
-
-The plugin accepts the following parameters (mixing and matching won't work):
-
-* `role` - A single or comma-separated list of roles.
-* `capability` - A single or comma-separated list of capabilities.
-* `user_name` - A single or comma-separated list of usernames.
-* `user_id` - A single or comma-separated list of user IDs.
-* `user_email` - A single or comma-separated list of user email addresses.
-
-**Parameters:**
-
-* `capability`:  A capability that has been assigned to a role.
-* `role`: A user role from WordPress or one that you've created.
-* `operator`: Accepts `!` to negate the role or capability.
-
-Note that `capability` and `role` parameters aren't used in conjunction.  The code first checks for the capability (if input) then checks for the role (if input).
-
-To check for multiple capabilities or multiple roles, simply add a comma between each capability/role.  For example, the following code checks for an editor or administrator:
-
-	[members_access role="administrator,editor"]Show this content to administrators or editors only.[/members_access]
-
-To check that the user does not have a role:
-
-	[members_access role="administrator" operator="!"]Show this content to anyone who is not an administrator.[/members_access]
-
-#### [members_logged_in]
-
-The `[members_logged_in]` shortcode should be used to check if a user is currently logged into the site.  If not, the content will be hidden.
-
-	[members_logged_in]This content is only shown to logged-in users.[/members_logged_in]
-
-This shortcode has no parameters.
-
-##### [members_not_logged_in]
-
-The `[members_not_logged_in]` shortcode should be used to show content to users who are not logged into the site.  If the user is logged in, the content will be hidden.
-
-	[members_not_logged_in]This content is only shown to logged-out visitors.[/members_not_logged_in]
-
-#### [members_login_form]
-
-The `[members_login_form]` shortcode is used to show a login form on the page.
-
-	[members_login_form /]
-
-This shortcode has no parameters.
-
-### Widgets
-
-The widgets component provides easy-to-use widgets for your site.  They can be used in any WordPress widget area (provided by your theme).  Currently, there's the Login Form and Users widgets.
-
-#### Login Form widget
-
-The Login Form gives you a login form.  It's a mixture of a text widget and login form.  It can also show your avatar.
-
-#### Users widget
-
-The Users widget allows you to list users in any widget area.  It's based off the `get_users()` function, so all of the [parameters are the same](http://codex.wordpress.org/Function_Reference/get_users).
-
-### Private site
-
-The Private Site features makes sure that only logged-in users can see anything on your site.  If a user visits your site and is not logged in, they are immediately redirected to your `wp-login.php` (WordPress login) page.
-
-You also have the option of disabling the viewing of feed content and setting an error message for feed items.
-
 ### Checking if the current user has a capability
 
 In plugins and your theme template files, you might sometimes need to check if the currently logged in user has permission to do something.  We do this by using the WordPress function `current_user_can()`.  The basic format looks like this:
@@ -269,3 +210,11 @@ The arguments for the array are:
 _Note that custom post types are automatically registered as groups with Members.  So, if you want to do something custom with that, you simply need to unregister the group before registering your own._
 
 	members_unregister_cap_group( "type-{$post_type}" );
+
+---
+
+### Copyright and License
+
+This project is licensed under the [GNU GPL](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html), version 2 or later.
+
+2009&thinsp;&ndash;&thinsp;2018 &copy; [Justin Tadlock](http://justintadlock.com).

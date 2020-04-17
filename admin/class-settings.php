@@ -172,8 +172,8 @@ final class Settings_Page {
 
 		// Create the settings page.
 		$this->settings_page = add_options_page(
-			esc_html_x( 'Members', 'admin screen', 'members' ),
-			esc_html_x( 'Members', 'admin screen', 'members' ),
+			esc_html_x( 'Permissions', 'admin screen', 'members' ),
+			esc_html_x( 'Permissions', 'admin screen', 'members' ),
 			apply_filters( 'members_settings_capability', 'manage_options' ),
 			$this->name,
 			array( $this, 'settings_page' )
@@ -273,7 +273,7 @@ final class Settings_Page {
 	public function settings_page() { ?>
 
 		<div class="wrap">
-			<h1><?php echo esc_html_x( 'Members', 'admin screen', 'members' ); ?></h1>
+			<h1><?php echo esc_html_x( 'WP Permission Manager', 'admin screen', 'members' ); ?></h1>
 
 			<div class="wp-filter">
 				<?php $this->filter_links(); ?>
