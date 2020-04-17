@@ -18,7 +18,7 @@ This plugin is forked from the last release (`2.2.0`) of the popular [justintadl
 
 - [x] ~~Update Composer/package details.~~
 - [x] ~~Update plugin name throughout codebase (`Members` → `WP Permission Manager`).~~
-- [ ] Remove non-functional admin pages (i.e. 'Donate').
+- [ ] Remove non-functional admin settings pages (i.e. 'Donate').
 
 #### `v3.0.0`
 
@@ -26,7 +26,8 @@ This plugin is forked from the last release (`2.2.0`) of the popular [justintadl
 - [ ] Remove all 'Widgets'.
 - [ ] Remove all 'Content Permission' functionality.
 - [ ] Remove 'Private Site' functionality.
-- [ ] Remove add-on functionality and maybe incorporate relevant add-ons (license dependant) into the plugin's core.
+- [ ] Bump minumum PHP version requirement to `>= 5.6.2`.
+- [ ] Remove add-ons functionality and maybe incorporate relevant add-ons (license dependant) into the plugin's core.
 
 #### `v4.0.0`
 
