@@ -34,13 +34,13 @@ If you're not [using Composer with WordPress](https://roots.io/bedrock-vs-regula
 
 <!-- Also see the release [milestones](https://github.com/freshsystems/wp-permission-manager/milestones). -->
 
-#### [`v2.2.1`](https://github.com/freshsystems/wp-permission-manager/releases/tag/2.2.1)
+#### [`v2.2.1`](https://github.com/freshsystems/wp-permission-manager/releases/tag/2.2.1) ✅
 
 - [x] ~~Update Composer/package details.~~
 - [x] ~~Update UI visible plugin and menu names (`Members` → `WP Permission Manager`).~~
 - [x] ~~Remove non-functional admin settings pages (i.e. 'Donate').~~
 
-#### [`v3.0.0`](https://github.com/freshsystems/wp-permission-manager/releases/tag/3.0.0)
+#### [`v3.0.0`](https://github.com/freshsystems/wp-permission-manager/releases/tag/3.0.0) ✅
 
 - [x] ~~Remove all 'Shortcodes'.~~
 - [x] ~~Remove all 'Widgets'.~~
