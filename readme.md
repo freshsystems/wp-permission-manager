@@ -28,7 +28,7 @@ In order to refocus plugin responsibilities, original features below were remove
 composer require freshsystems/wp-permission-manager:^3
 ```
 
-If you're not [using Composer with WordPress](https://roots.io/bedrock-vs-regular-wordpress-install/), you can also download the ZIP archive from the releases page and upload/install the plugin manually. The plugin will installable through the official WordPress Plugin Directory after significant refactoring in `v4.0.0`.
+If you're not [using Composer with WordPress](https://roots.io/bedrock-vs-regular-wordpress-install/), you can alternatively download the ZIP archive from the releases page and upload/install the plugin manually. The plugin will installable through the official WordPress Plugin Directory after significant refactoring in `v4.0.0`.
 
 ## Roadmap
 
