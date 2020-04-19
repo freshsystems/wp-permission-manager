@@ -15,7 +15,7 @@ This plugin is forked from the last release of the popular [justintadlock/member
 * **Explicitly Deny Capabilities:** Deny specific caps to specific user roles.
 * **Clone Roles:** Build a new role by cloning an existing role.
 
-In order to refocus the plugin's features, the functionality below was removed in [`v3.0.0`](https://github.com/freshsystems/wp-permission-manager/releases/tag/3.0.0). If you still require these features you can use the [`v2.2.1`](https://github.com/freshsystems/wp-permission-manager/releases/tag/2.2.1) release, or another version of this plugin.
+In order to refocus plugin responsibilities, original features below were removed in [`v3.0.0`](https://github.com/freshsystems/wp-permission-manager/releases/tag/3.0.0). If you still require these features you can use the [`v2.2.1`](https://github.com/freshsystems/wp-permission-manager/releases/tag/2.2.1) release, or another version of this plugin.
 
 * ~~**Content Permissions:** Gives you control over which users (by role) have access to post content.~~
 * ~~**Shortcodes:** Shortcodes to control who has access to content.~~
