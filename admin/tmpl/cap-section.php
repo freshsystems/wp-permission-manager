@@ -5,7 +5,9 @@
  * @package    Members
  * @subpackage Admin
  * @author     Justin Tadlock <justintadlock@gmail.com>
- * @copyright  Copyright (c) 2009 - 2018, Justin Tadlock
+ * @author     Fresh Systems Ltd. <info@freshsystems.co.uk>
+ * @copyright  Original work Copyright (c) 2009 - 2018, Justin Tadlock
+ * @copyright  Modified work Copyright (c) 2020, Fresh Systems Ltd.
  * @link       https://themehybrid.com/plugins/members
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
