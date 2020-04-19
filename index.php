@@ -3,7 +3,7 @@
  * Plugin Name: WP Permission Manager
  * Plugin URI:  https://github.com/freshsystems/wp-permission-manager/
  * Description: A user role management plugin for WordPress that puts you in full control of your site's permissions.
- * Version:     2.2.0
+ * Version:     2.2.1
  * Author:      Fresh Systems
  * Author URI:  https://freshsystems.co.uk
  * Text Domain: members
@@ -24,11 +24,13 @@
  * You should have received a copy of the GNU General Public License along with this program; if not,
  * write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
  *
- * @package   Members
- * @version   2.2.0
+ * @package   WP Permission Manager
+ * @version   2.2.1
  * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright Copyright (c) 2009 - 2018, Justin Tadlock
- * @link      https://themehybrid.com/plugins/members
+ * @author    Fresh Systems Ltd. <info@freshsystems.co.uk>
+ * @copyright Original work Copyright (c) 2009 - 2018, Justin Tadlock
+ * @copyright Modified work Copyright (c) 2020, Fresh Systems Ltd.
+ * @link      https://github.com/freshsystems/wp-permission-manager/
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 

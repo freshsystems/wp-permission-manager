@@ -1,5 +1,13 @@
 # Change Log
 
+## [2.2.1] - 2019-04-19
+
+### Changed
+
+- Update Composer/package details to `freshsystems/wp-permission-manager`.
+- Update UI visible plugin and menu names ('Members' → 'WP Permission Manager').
+- Removed admin 'Donate' page.
+
 ## [2.2.0] - 2019-07-20
 
 ### Added
