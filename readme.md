@@ -8,7 +8,7 @@ This plugin is forked from the last release of the popular [justintadlock/member
 
 ---
 
-### Plugin Features
+## Plugin Features
 
 * **Role Manager:** Allows you to edit, create, and delete roles as well as capabilities for these roles.
 * **Multiple User Roles:** Give one, two, or even more roles to any user.
@@ -22,7 +22,7 @@ In order to refocus the plugin's functionality, the following features from the 
 * ~~**Widgets:**  A login form widget and users widget to show in your theme's sidebars.~~
 * ~~**Private Site:** You can make your site and its feed completely private if you want.~~
 
-### Installation
+## Installation
 
 ```
 composer require freshsystems/wp-permission-manager:^3
@@ -30,7 +30,7 @@ composer require freshsystems/wp-permission-manager:^3
 
 If you're not [using Composer with WordPress](https://roots.io/bedrock-vs-regular-wordpress-install/), you can also download the ZIP archive from the releases page and upload/install the plugin manually. The plugin will installable through the official WordPress Plugin Directory after significant refactoring in `v4.0.0`.
 
-### Roadmap
+## Roadmap
 
 <!-- Also see the release [milestones](https://github.com/freshsystems/wp-permission-manager/milestones). -->
 
@@ -211,5 +211,5 @@ _Note that custom post types are automatically registered as groups with Members
 
 This project is licensed under the [GNU GPL](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html), version 2 or later.
  
-Original work Copyright © 2009 - 2018, [Justin Tadlock](http://justintadlock.com).
-Modified work Copyright © 2020, [Fresh Systems Ltd](https://freshsystems.co.uk).
+- Original work Copyright © 2009 - 2018, [Justin Tadlock](http://justintadlock.com).
+- Modified work Copyright © 2020, [Fresh Systems Ltd](https://freshsystems.co.uk).
