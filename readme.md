@@ -18,7 +18,7 @@ This plugin is forked from the last release (`2.2.0`) of the popular [justintadl
 
 - [x] ~~Update Composer/package details.~~
 - [x] ~~Update UI visible plugin and menu names (`Members` → `WP Permission Manager`).~~
-- [ ] Remove non-functional admin settings pages (i.e. 'Donate').
+- [x] ~~Remove non-functional admin settings pages (i.e. 'Donate').~~
 
 #### `v3.0.0`
 
