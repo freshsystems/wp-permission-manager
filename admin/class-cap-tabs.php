@@ -8,7 +8,7 @@
  * @author     Fresh Systems Ltd. <info@freshsystems.co.uk>
  * @copyright  Original work Copyright (c) 2009 - 2018, Justin Tadlock
  * @copyright  Modified work Copyright (c) 2020, Fresh Systems Ltd.
- * @link       https://themehybrid.com/plugins/members
+ * @link       https://github.com/freshsystems/wp-permission-manager/
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
