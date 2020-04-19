@@ -22,16 +22,18 @@ This plugin is forked from the last release (`2.2.0`) of the popular [justintadl
 
 #### `v3.0.0`
 
-- [ ] Remove all 'Shortcodes'.
-- [ ] Remove all 'Widgets'.
-- [ ] Remove all 'Content Permission' functionality.
-- [ ] Remove 'Private Site' functionality.
-- [ ] Bump minumum PHP version requirement to `>= 5.6.2`.
-- [ ] Remove add-ons functionality and maybe incorporate relevant add-ons (license dependant) into the plugin's core.
+- [x] ~~Remove all 'Shortcodes'.~~
+- [x] ~~Remove all 'Widgets'.~~
+- [x] ~~Remove all 'Content Permission' functionality.~~
+- [x] ~~Remove 'Private Site' functionality.~~
+- [x] ~~Remove all 'add-ons' functionality.~~
+- [x] ~~Make the core 'Role Manager' always enabled.~~
+- [x]  ~~Bump minumum PHP version requirement to `>= 5.6.20`.~~
 
 #### `v4.0.0`
 
 - [ ] Replace remaining "members" terminology (translation text-domain, slug use, etc.).
+- [ ] Maybe incorporate relevant add-ons (license dependant) into the plugin's core.
 - [ ] Replace the plugin's namespace, e.g. `Members\` → `Fresh\PermissionManager\`.
 - [ ] Replace the prefix for all filter/action hook names and functions (deprecate the originals for permanent backwards-compatibility), e.g. `members_register_cap_group()` → `Fresh\PermissionManager\register_cap_group()`, `members_register_cap_groups` → `wppm_register_cap_groups`.
 - [ ] Consider implementing some enhancements proposed in [justintadlock/members - 3.0.0 Milestone](https://github.com/justintadlock/members/milestone/5).

@@ -38,17 +38,6 @@ function members_register_default_settings_views( $manager ) {
 		)
 	);
 
-	// Register add-ons view.
-	$manager->register_view(
-		new \Members\Admin\View_Addons(
-			'add-ons',
-			array(
-				'label'    => esc_html__( 'Add-Ons', 'members' ),
-				'priority' => 95
-			)
-		)
-	);
-
 }
 
 /**

@@ -91,7 +91,6 @@ final class Settings_Page {
 		// Load settings view classes.
 		require_once( members_plugin()->dir . 'admin/views/class-view.php'         );
 		require_once( members_plugin()->dir . 'admin/views/class-view-general.php' );
-		require_once( members_plugin()->dir . 'admin/views/class-view-addons.php'  );
 	}
 
 	/**
@@ -171,8 +170,8 @@ final class Settings_Page {
 
 		// Create the settings page.
 		$this->settings_page = add_options_page(
-			esc_html_x( 'Permissions', 'admin screen', 'members' ),
-			esc_html_x( 'Permissions', 'admin screen', 'members' ),
+			esc_html_x( 'Permission Manager', 'admin screen', 'members' ),
+			esc_html_x( 'Permission Manager', 'admin screen', 'members' ),
 			apply_filters( 'members_settings_capability', 'manage_options' ),
 			$this->name,
 			array( $this, 'settings_page' )
@@ -272,11 +271,15 @@ final class Settings_Page {
 	public function settings_page() { ?>
 
 		<div class="wrap">
-			<h1><?php echo esc_html_x( 'WP Permission Manager', 'admin screen', 'members' ); ?></h1>
+			<h1><?php echo esc_html_x( 'Permission Manager', 'admin screen', 'members' ); ?></h1>
 
-			<div class="wp-filter">
-				<?php $this->filter_links(); ?>
-			</div>
+			<?php if ( count( $this->views ) > 1 ): ?>
+				<div class="wp-filter">
+					<?php $this->filter_links(); ?>
+				</div>
+			<?php else: ?>
+				<hr/>
+			<?php endif; ?>
 
 			<?php $this->get_view( members_get_current_settings_view() )->template(); ?>
 

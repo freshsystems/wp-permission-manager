@@ -49,7 +49,7 @@ final class Members_Plugin {
 	 * @access public
 	 * @var    string
 	 */
-	private $php_version = '5.3.0';
+	private $php_version = '5.6.20';
 
 	/**
 	 * Plugin directory path.
@@ -200,18 +200,11 @@ final class Members_Plugin {
 		require_once( $this->dir . 'inc/functions-admin-bar.php'           );
 		require_once( $this->dir . 'inc/functions-capabilities.php'        );
 		require_once( $this->dir . 'inc/functions-cap-groups.php'          );
-		require_once( $this->dir . 'inc/functions-content-permissions.php' );
 		require_once( $this->dir . 'inc/functions-deprecated.php'          );
 		require_once( $this->dir . 'inc/functions-options.php'             );
-		require_once( $this->dir . 'inc/functions-private-site.php'        );
 		require_once( $this->dir . 'inc/functions-roles.php'               );
 		require_once( $this->dir . 'inc/functions-role-groups.php'         );
-		require_once( $this->dir . 'inc/functions-shortcodes.php'          );
 		require_once( $this->dir . 'inc/functions-users.php'               );
-		require_once( $this->dir . 'inc/functions-widgets.php'             );
-
-		// Load template files.
-		require_once( $this->dir . 'inc/template.php' );
 
 		// Load admin files.
 		if ( is_admin() ) {
@@ -227,9 +220,6 @@ final class Members_Plugin {
 			require_once( $this->dir . 'admin/class-manage-users.php' );
 			require_once( $this->dir . 'admin/class-user-edit.php'    );
 			require_once( $this->dir . 'admin/class-user-new.php'     );
-
-			// Edit posts.
-			require_once( $this->dir . 'admin/class-meta-box-content-permissions.php' );
 
 			// Role management.
 			require_once( $this->dir . 'admin/class-manage-roles.php'          );

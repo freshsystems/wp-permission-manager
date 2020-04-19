@@ -20,15 +20,13 @@
 function members_get_help_sidebar_text() {
 
 	// Get docs and help links.
-	$docs_link = sprintf( '<li><a href="https://github.com/justintadlock/members/blob/master/readme.md">%s</a></li>', esc_html__( 'Documentation',  'members' ) );
-	$help_link = sprintf( '<li><a href="https://themehybrid.com/board/topics">%s</a></li>',                            esc_html__( 'Support Forums', 'members' ) );
+	$docs_link = sprintf( '<li><a href="https://github.com/freshsystems/wp-permission-manager/blob/master/readme.md">%s</a></li>', esc_html__( 'Documentation',  'members' ) );
 
 	// Return the text.
 	return sprintf(
-		'<p><strong>%s</strong></p><ul>%s%s</ul>',
+		'<p><strong>%s</strong></p><ul>%s</ul>',
 		esc_html__( 'For more information:', 'members' ),
-		$docs_link,
-		$help_link
+		$docs_link
 	);
 }
 
