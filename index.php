@@ -289,8 +289,7 @@ final class Members_Plugin {
 		// If the administrator role exists, add required capabilities for the plugin.
 		if ( ! empty( $role ) ) {
 
-			$role->add_cap( 'restrict_content' ); // Edit per-post content permissions.
-			$role->add_cap( 'list_roles'       ); // View roles in backend.
+			$role->add_cap( 'list_roles' ); // View roles in backend.
 
 			// Do not allow administrators to edit, create, or delete roles
 			// in a multisite setup. Super admins should assign these manually.

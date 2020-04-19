@@ -122,9 +122,6 @@ function members_register_default_caps() {
 	$caps['promote_users'] = array( 'label' => __( 'Promote Users', 'members' ), 'group' => 'user' );
 	$caps['remove_users']  = array( 'label' => __( 'Remove Users',  'members' ), 'group' => 'user' );
 
-	// Custom caps.
-	$caps['restrict_content'] = array( 'label' => __( 'Restrict Content', 'members' ), 'group' => 'custom' );
-
 	// Register each of the capabilities.
 	foreach ( $caps as $name => $args )
 		members_register_cap( $name, $args );
