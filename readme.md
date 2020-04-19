@@ -2,13 +2,33 @@
 
 **A user role management plugin for WordPress that puts you in full control of your site's permissions.**
 
-This plugin is forked from the last release (`2.2.0`) of the popular [justintadlock/members](https://github.com/justintadlock/members) plugin, before it's codebase was hijacked and turned into a sales pitch for a premium plugin by it's new maintainers. 
-
-> Note that the ambition for this fork is to strip out all but the role & capability management features (see 'Deprecated Features' below), and to maintain this functionality through future WP releases. If you rely on these features please use an alternative version.
+This plugin is forked from the last release of the popular [justintadlock/members](https://github.com/justintadlock/members) plugin, before it's codebase was hijacked and turned into a sales pitch for a premium plugin by it's new maintainers. 
 
 ![Screenshot](screenshot-2.png)
 
 ---
+
+### Plugin Features
+
+* **Role Manager:** Allows you to edit, create, and delete roles as well as capabilities for these roles.
+* **Multiple User Roles:** Give one, two, or even more roles to any user.
+* **Explicitly Deny Capabilities:** Deny specific caps to specific user roles.
+* **Clone Roles:** Build a new role by cloning an existing role.
+
+In order to refocus the plugin's functionality, the following features from the original plugin were removed in `v3.0.0`. If you still need these features, you can use the [`v2.2.1`](https://github.com/freshsystems/wp-permission-manager/releases/tag/2.2.1) release, or another version of this plugin.
+
+* ~~**Content Permissions:** Gives you control over which users (by role) have access to post content.~~
+* ~~**Shortcodes:** Shortcodes to control who has access to content.~~
+* ~~**Widgets:**  A login form widget and users widget to show in your theme's sidebars.~~
+* ~~**Private Site:** You can make your site and its feed completely private if you want.~~
+
+### Installation
+
+```
+composer require freshsystems/wp-permission-manager:^3
+```
+
+If you're not [using Composer with WordPress](https://roots.io/bedrock-vs-regular-wordpress-install/), you can also download the ZIP archive from the releases page and upload/install the plugin manually. The plugin will installable through the official WordPress Plugin Directory after significant refactoring in `v4.0.0`.
 
 ### Roadmap
 
@@ -40,43 +60,9 @@ This plugin is forked from the last release (`2.2.0`) of the popular [justintadl
 - [ ] Update `readme.md` documentation and add `readme.txt` files.
 - [ ] Publish to the WordPress Plugin Directory.
 
-### Plugin Features
-
-* **Role Manager:** Allows you to edit, create, and delete roles as well as capabilities for these roles.
-* **Multiple User Roles:** Give one, two, or even more roles to any user.
-* **Explicitly Deny Capabilities:** Deny specific caps to specific user roles.
-* **Clone Roles:** Build a new role by cloning an existing role.
-
-### Deprecated Features
-
-Expect the following features to be removed entirely in the near future.
-
-* ~~**Content Permissions:** Gives you control over which users (by role) have access to post content.~~
-* ~~**Shortcodes:** Shortcodes to control who has access to content.~~
-* ~~**Widgets:**  A login form widget and users widget to show in your theme's sidebars.~~
-* ~~**Private Site:** You can make your site and its feed completely private if you want.~~
-
 ---
 
 ## Documentation
-
-### The relationship of users, roles, and capabilities
-
-This is the most important thing to understand with this plugin.  It's so important that I took the time out of my day to write a complete tutorial on understanding this:  [Users, roles, and capabilities in WordPress](http://justintadlock.com/archives/2009/08/30/users-roles-and-capabilities-in-wordpress).  If you don't understand this concept, you won't understand what this plugin does.  This is not a concept created by the plugin.  This is how it's done in WordPress.
-
-I highly recommend reading that blog post, but here's the short version:
-
-* **Users** are people that have registered on your site.  I'm sure you already knew that.  In WordPress, users are assigned a specific role.  This role defines what the user can/can't do.
-* **Roles** are a way of grouping users.  Each user on your site will have a specific role.  Roles are a set of capabilities.  It is important to note that **roles are not hierarchical**.  For example, "Administrator" is not higher than "Subscriber" in WordPress.  You could literally give the Subscriber role more capabilities than the Administrator role.  It's very important that you grasp this concept.
-* **Capabilities** give meaning to roles.  It's a permissions system.  They're a way of saying a role *can* do something or a role *can't* do something (e.g., Role A can `edit_posts`, Role B can't `activate_plugins`, etc.).
-
-### How to use the plugin
-
-This plugin is set up to have a components-based system.  The reason for this is that I don't want to stick everyone with a bunch of features they don't need.  There's no point in using the Role Manger feature if all you need is just a login widget and some shortcodes.  So, it's a *use-only-what-you-want* system.
-
-To activate certain features, look for the "Members" link under your "Settings" menu while in your WordPress admin.  When on the new page, you'll be able to select the features you want to use.
-
-I recommend at least activating Role Manager feature.  It is at the heart of this plugin, and many other features will likely require its use in some form.
 
 ### Role management
 
@@ -224,5 +210,6 @@ _Note that custom post types are automatically registered as groups with Members
 ### Copyright and License
 
 This project is licensed under the [GNU GPL](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html), version 2 or later.
-
-2009&thinsp;&ndash;&thinsp;2018 &copy; [Justin Tadlock](http://justintadlock.com).
+ 
+Original work Copyright © 2009 - 2018, [Justin Tadlock](http://justintadlock.com).
+Modified work Copyright © 2020, [Fresh Systems Ltd](https://freshsystems.co.uk).

@@ -1,5 +1,17 @@
 # Change Log
 
+## [3.0.0] - 2019-04-19
+
+### Changed
+
+- Remove all 'Shortcodes'.
+- Remove all 'Widgets'.
+- Remove all 'Content Permission' functionality.
+- Remove 'Private Site' functionality.
+- Remove all 'add-ons' functionality.
+- Make the core 'Role Manager' always enabled.
+- Bump minumum PHP version requirement to `>= 5.6.20`.
+
 ## [2.2.1] - 2019-04-19
 
 ### Changed
