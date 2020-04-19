@@ -14,7 +14,7 @@ This plugin is forked from the last release (`2.2.0`) of the popular [justintadl
 
 <!-- Also see the release [milestones](https://github.com/freshsystems/wp-permission-manager/milestones). -->
 
-#### `v2.2.1`
+#### [`v2.2.1`](https://github.com/freshsystems/wp-permission-manager/releases/tag/2.2.1)
 
 - [x] ~~Update Composer/package details.~~
 - [x] ~~Update UI visible plugin and menu names (`Members` → `WP Permission Manager`).~~
