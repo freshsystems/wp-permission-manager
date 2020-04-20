@@ -142,11 +142,11 @@ Only users with a role that has the `read_pages` capability will be able to see 
 
 Before beginning, I want to note that you really shouldn't do this.  It's better to check against capabilities.  However, for those times when you need to break the rules, you can do so like:
 
-	if ( members_user_has_role( $user_id, $role ) )
+	if ( members_user_has_role( $user_id, $role ) ):
 
 Or, you can check against the current user:
 
-	if ( members_current_user_has_role( $role ) )
+	if ( members_current_user_has_role( $role ) ):
 
 ### Need the old user levels system?
 
@@ -160,18 +160,17 @@ By default, the levels aren't shown.  They still exist, but are tucked away behi
 
 If you're a plugin developer with custom capabilities, beginning with version 2.0.0 of Members, you can register your capabilities with Members.  Essentially, this allows users to see your capabilities in a nicely-formatted, human-readable form (e.g., `Publish Posts` instead of `publish_posts`).  This also means that it can be translated so that it's easier to understand for users who do not read English.
 
-	add_action( 'members_register_caps', 'th_register_caps' );
+```
+<?php // e.g. functions.php
 
-	function th_register_caps() {
-
-		members_register_cap(
-			'your_cap_name',
-			array(
-				'label' => __( 'Your Capability Label', 'example-textdomain' ),
-				'group' => 'example'
-			)
-		);
-	}
+add_action( 'members_register_caps', function()
+{
+    members_register_cap( 'your_cap_name', [
+        'label' => __( 'Your Capability Label', 'example-textdomain' ),
+        'group' => 'example',
+    ]);
+});
+```
 
 The `group` argument is not required, but will allow you to assign the capability to a cap group.
 
@@ -179,20 +178,19 @@ The `group` argument is not required, but will allow you to assign the capabilit
 
 Members groups capabilities so that users can more easily find them when editing roles.  If your plugin has multiple capabilities, you should consider creating a custom cap group.
 
-	add_action( 'members_register_cap_groups', 'th_register_cap_groups' );
+```
+<?php // e.g. functions.php
 
-	function th_register_cap_groups() {
-
-		members_register_cap_group(
-			'your_group_name',
-			array(
-				'label'    => __( 'Your Group Label', 'example-textdomain' ),
-				'caps'     => array(),
-				'icon'     => 'dashicons-admin-generic',
-				'priority' => 10
-			)
-		);
-	}
+add_action( 'members_register_cap_groups', function()
+{
+    members_register_cap_group( 'your_group_name', [
+        'label'    => __( 'Your Group Label', 'example-textdomain' ),
+        'caps'     => [],
+        'icon'     => 'dashicons-admin-generic',
+        'priority' => 10,
+    ]);
+});
+```
 
 The arguments for the array are:
 
