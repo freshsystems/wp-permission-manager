@@ -128,13 +128,17 @@ On the "Users" screen in the admin, you can bulk add or remove single roles from
 
 In plugins and your theme template files, you might sometimes need to check if the currently logged in user has permission to do something.  We do this by using the WordPress function `current_user_can()`.  The basic format looks like this:
 
-	<?php if ( current_user_can( 'capability_name' ) ) echo 'This user can do something'; ?>
+```php
+<?php if ( current_user_can( 'capability_name' ) ) echo 'This user can do something'; ?>
+```
 
 For a more practical situation, let's say you created a new capability called `read_pages`.  Well, you might want to hide the content within your `page.php` template by adding this:
 
-	<?php if ( current_user_can( 'read_pages ' ) ) : ?>
-		<?php the_content(); ?>
-	<?php endif; ?>
+```php
+<?php if ( current_user_can( 'read_pages ' ) ): ?>
+    <?php the_content(); ?>
+<?php endif; ?>
+```
 
 Only users with a role that has the `read_pages` capability will be able to see the content.
 
@@ -142,11 +146,15 @@ Only users with a role that has the `read_pages` capability will be able to see 
 
 Before beginning, I want to note that you really shouldn't do this.  It's better to check against capabilities.  However, for those times when you need to break the rules, you can do so like:
 
-	if ( members_user_has_role( $user_id, $role ) ):
+```php
+if ( members_user_has_role( $user_id, $role ) ) // ...
+```
 
 Or, you can check against the current user:
 
-	if ( members_current_user_has_role( $role ) ):
+```php
+if ( members_current_user_has_role( $role ) ) // ...
+```
 
 ### Need the old user levels system?
 
@@ -154,13 +162,15 @@ Some plugins and themes might rely on the old user level system in WordPress.  T
 
 By default, the levels aren't shown.  They still exist, but are tucked away behind the scenes.  While not recommended, if you need to control who has what level (levels are just capabilities), add this to your plugin or your theme's `functions.php`:
 
-	add_filter( 'members_remove_old_levels', '__return_false' );
+```php
+add_filter( 'members_remove_old_levels', '__return_false' );
+```
 
 ### Registering capabilities
 
 If you're a plugin developer with custom capabilities, beginning with version 2.0.0 of Members, you can register your capabilities with Members.  Essentially, this allows users to see your capabilities in a nicely-formatted, human-readable form (e.g., `Publish Posts` instead of `publish_posts`).  This also means that it can be translated so that it's easier to understand for users who do not read English.
 
-```
+```php
 <?php // e.g. functions.php
 
 add_action( 'members_register_caps', function()
@@ -178,7 +188,7 @@ The `group` argument is not required, but will allow you to assign the capabilit
 
 Members groups capabilities so that users can more easily find them when editing roles.  If your plugin has multiple capabilities, you should consider creating a custom cap group.
 
-```
+```php
 <?php // e.g. functions.php
 
 add_action( 'members_register_cap_groups', function()
@@ -201,7 +211,9 @@ The arguments for the array are:
 
 _Note that custom post types are automatically registered as groups with Members.  So, if you want to do something custom with that, you simply need to unregister the group before registering your own._
 
-	members_unregister_cap_group( "type-{$post_type}" );
+```php
+members_unregister_cap_group( "type-{$post_type}" );
+```
 
 ---
 
