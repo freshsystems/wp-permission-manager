@@ -1,5 +1,11 @@
 # Change Log
 
+## [3.0.1] - 2022-01-05
+
+### Changed
+
+- Allow the use of `composer/installers` `v2` in addition to `v1`.
+
 ## [3.0.0] - 2019-04-19
 
 ### Changed

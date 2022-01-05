@@ -3,7 +3,7 @@
  * Plugin Name: WP Permission Manager
  * Plugin URI:  https://github.com/freshsystems/wp-permission-manager/
  * Description: A user role management plugin for WordPress that puts you in full control of your site's permissions.
- * Version:     3.0.0
+ * Version:     3.0.1
  * Author:      Fresh Systems
  * Author URI:  https://freshsystems.co.uk
  * Text Domain: members
@@ -25,7 +25,7 @@
  * write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
  *
  * @package   WP Permission Manager
- * @version   3.0.0
+ * @version   3.0.1
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @author    Fresh Systems Ltd. <info@freshsystems.co.uk>
  * @copyright Original work Copyright (c) 2009 - 2018, Justin Tadlock
