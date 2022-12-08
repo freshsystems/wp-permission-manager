@@ -1,4 +1,4 @@
-# WP Permission Manager
+# 👥 Permission Manager
 
 **A user role management plugin for WordPress that puts you in full control of your site's permissions.**
 
